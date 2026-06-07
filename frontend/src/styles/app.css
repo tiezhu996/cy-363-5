@@ -162,3 +162,96 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.schedule-header h3 {
+  margin: 0;
+}
+
+.schedule-card {
+  transition: all 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.schedule-card.locked {
+  background: linear-gradient(135deg, #fff1f0 0%, #fff 100%);
+}
+
+.schedule-card.locked .ant-card-body {
+  opacity: 0.7;
+}
+
+.schedule-card .ant-card-actions {
+  border-top: 1px solid #f0f0f0;
+}
+
+.schedule-card .ant-card-actions > li {
+  margin: 8px 0;
+}
+
+.board-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.board-header h3 {
+  margin: 0;
+}
+
+.schedule-management .ant-table {
+  background: color-mix(in srgb, #f9f0f2 86%, white 14%);
+}
+
+.schedule-management .ant-table-thead > tr > th {
+  background: color-mix(in srgb, #9b3357 10%, transparent);
+  font-weight: 600;
+}
+
+.ant-tabs {
+  background: color-mix(in srgb, #f9f0f2 86%, white 14%);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.ant-tabs-tab {
+  border-radius: 6px;
+  margin: 0 4px !important;
+}
+
+.ant-tabs-tab-active {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 640px) {
+  .schedule-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .schedule-header .ant-space {
+    width: 100%;
+  }
+
+  .schedule-header .ant-space-item {
+    width: 100%;
+  }
+
+  .schedule-header .ant-picker,
+  .schedule-header .ant-btn {
+    width: 100%;
+  }
+}
